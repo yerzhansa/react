@@ -3,6 +3,7 @@ import { Props } from './types'
 import s from './styles.module.css'
 import { ChatItem } from '../ChatItem'
 import { IChat } from '../ChatItem/types'
+import { descendingSort } from '../../utils/sort'
 
 export const ChatList: Props = ({
   chats,
@@ -12,7 +13,7 @@ export const ChatList: Props = ({
   const compareFn = (a: IChat, b: IChat) => {
     const timeA = new Date(a.lastMessageDate).getTime()
     const timeB = new Date(b.lastMessageDate).getTime()
-    return timeB - timeA
+    return descendingSort<number>(timeA, timeB)
   }
 
   const mapChats = ({

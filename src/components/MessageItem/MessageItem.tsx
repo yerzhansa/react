@@ -5,7 +5,7 @@ import { Avatar } from '../Avatar'
 
 export const MessageItem: Props = ({ userName, userAvatar, date, message }) => {
   return (
-    <li className={s.item}>
+    <div className={s.item}>
       <Avatar imageLink={userAvatar} alt={userName} />
       <div className={s.content}>
         <div className={s.meta}>
@@ -16,6 +16,6 @@ export const MessageItem: Props = ({ userName, userAvatar, date, message }) => {
           <div>{message}</div>
         </div>
       </div>
-    </li>
+    </div>
   )
 }

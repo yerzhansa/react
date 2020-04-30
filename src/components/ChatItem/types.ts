@@ -11,7 +11,7 @@ export interface IChat {
 
 interface OwnProps {
   handleClickOnChat: (id: number) => () => void
-  selectedChatId?: number
+  isChatSelected?: boolean
 }
 
 export type Props = FC<IChat & OwnProps>

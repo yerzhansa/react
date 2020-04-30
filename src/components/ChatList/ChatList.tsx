@@ -23,19 +23,20 @@ export const ChatList: Props = ({
     lastMessageAuthor,
     lastMessageDate,
   }: IChat) => (
-    <ChatItem
-      key={id}
-      selectedChatId={selectedChatId}
-      handleClickOnChat={handleClickOnChat}
-      {...{
-        id,
-        name,
-        imageLink,
-        lastMessage,
-        lastMessageAuthor,
-        lastMessageDate,
-      }}
-    />
+    <li key={id}>
+      <ChatItem
+        isChatSelected={selectedChatId === id}
+        handleClickOnChat={handleClickOnChat}
+        {...{
+          id,
+          name,
+          imageLink,
+          lastMessage,
+          lastMessageAuthor,
+          lastMessageDate,
+        }}
+      />
+    </li>
   )
 
   return <ul className={s.list}>{chats.sort(compareFn).map(mapChats)}</ul>

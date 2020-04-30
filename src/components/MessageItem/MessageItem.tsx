@@ -1,9 +1,9 @@
 import React from 'react'
 import { Props } from './types'
 import s from './styles.module.css'
-import Avatar from '../Avatar'
+import { Avatar } from '../Avatar'
 
-const MessageItem: Props = ({ userName, userAvatar, date, message }) => {
+export const MessageItem: Props = ({ userName, userAvatar, date, message }) => {
   return (
     <li className={s.item}>
       <Avatar imageLink={userAvatar} alt={userName} />
@@ -19,5 +19,3 @@ const MessageItem: Props = ({ userName, userAvatar, date, message }) => {
     </li>
   )
 }
-
-export default MessageItem

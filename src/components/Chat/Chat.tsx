@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react'
-import ChatList from '../ChatList'
+import { ChatList } from '../ChatList'
+import { MessageList } from '../MessageList'
 import chats from '../../mocks/chat/chatList.json'
 import allMessages from '../../mocks/chat/messageList.json'
-import MessageList from '../MessageList'
 import { IMessage } from '../MessageItem/types'
 import s from './styles.module.css'
 
-const Chat = () => {
+export const Chat = () => {
   const [selectedChatId, setSelectedChatId] = useState<number>()
   const [chatMessages, setChatMessages] = useState<IMessage[]>([])
 
@@ -30,5 +30,3 @@ const Chat = () => {
     </div>
   )
 }
-
-export default Chat

@@ -1,9 +1,9 @@
 import React from 'react'
 import s from './styles.module.css'
 import { Props } from './types'
-import Avatar from '../Avatar'
+import { Avatar } from '../Avatar'
 
-const ChatItem: Props = ({
+export const ChatItem: Props = ({
   id,
   name,
   imageLink,
@@ -36,5 +36,3 @@ const ChatItem: Props = ({
     </li>
   )
 }
-
-export default ChatItem

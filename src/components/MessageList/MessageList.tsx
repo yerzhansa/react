@@ -1,8 +1,8 @@
 import React from 'react'
 import { Props } from './types'
-import MessageItem from '../MessageItem'
+import { MessageItem } from '../MessageItem'
 
-const MessageList: Props = ({ messages }) => {
+export const MessageList: Props = ({ messages }) => {
   return (
     <ul>
       {messages.length > 0 ? (
@@ -22,5 +22,3 @@ const MessageList: Props = ({ messages }) => {
     </ul>
   )
 }
-
-export default MessageList
